@@ -2,68 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta name="description" content="Strong Password Generator Tool-Use this free strong password generator tool to create highly secure passwords that are difficult to crack or guess">
-  <meta name="keywords" content="Security,Password Generator">
-  <meta name="author" content="Numan">
-  <meta property="og:image" content="images/logo.png" />
-
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favico.ico" type="image/x-icon">
+    <meta property="og:image" content="images/logo.png" />
+    <meta name="description"
+    content="Strong Password Generator Tool - Use this free strong password generator tool to create highly secure passwords that are difficult to crack or guess.">
+<meta name="keywords" content="Security, Password Generator">
+<meta name="author" content="Viz">
 </head>
 <body>
-    <section>
-        <div class="app">
-            <div class="header">
-                <img src="images/logo.png" alt="PasswordIcon" height="100">
-            </div>
-            <div class="header">
-                <h1>Strong Password Generator Tool</h1>
-            </div>
-            <div class="password-container"> 
-                <hr>
-                <form onsubmit="submitform(event)">
-                   <div class="label-fields">
-                        <label for="vol">Choose the password length (between 6 and 2048)</label>
-                        <input type="range" id="password-length" name="length" min="6" max="30" oninput="dummy()">
-                        <p>Password length is <span id="len"></span></p>
-                   </div>
-                   <div class="label-fields">
-                        <label for="symbols">Do you want to include Symbols</label>
-                        <input type="checkbox" id="symbols" name="symbols">
-                    </div>
-                    <div class="label-fields">
-                        <label for="Digits">Do you want to include Digits</label>
-                        <input type="checkbox" id="Digits" name="Digits">
-                    </div>
-                    <div class="label-fields">
-                         <label for="lowercase">Do you want to include lowercase characters</label>
-                        <input type="checkbox" id="lowercase" name="lowercase">
-                    </div>
-                    <div class="label-fields">
-                         <label for="uppercase">Do you want to include uppercase characters</label>
-                        <input type="checkbox" id="uppercase" name="uppercase">
-                    </div>
-                    <div class="label-fields">
-                        <label for="duplicates">Do you want to exclude duplicate characters</label>
-                        <input type="checkbox" id="duplicates" name="duplicates">
-                    </div>
-                    <div class="label-fields">
-                        <label for="ambiguous">Do you want to exclude ambiguous characters</label>
-                        <input type="checkbox" id="ambiguous" name="ambiguous">
-                    </div>
-                <div>
-                    <input type="submit" value="Submit">
-                </div><br>
-                <div>
-                    <textarea name="output" id="output">  </textarea>
-                </div>
-                </form>
-            </div>
+  <center>
+    <section class="container">
+      <div >
+        <img src="images/logo.png" height="100"><h1>Strong Password Generator</h1>
+        <hr >
+      </div>
+      
+      <div class="form">
+          <form onsubmit="objectgen(event)">
+            <div>
+              <label for="">Choose the Password Length (between 6 to 30): <span id="len">  </span></label> 
+              <input type="range" min="6" max="30" id="password-length" name="password-length" oninput="dummy();">
 
-        </div>
-    </section>
+            </div>
+            <div><label for="">Do you want to include Symbols :</label>
+              <input type="checkbox" id="symbols" name="symbols">
+            </div>
+            <div>
+              <label for="">Do you want to include Uppercase Characters :</label>
+              <input type="checkbox" id="Uppercase" name="Uppercase">
+            </div>
+            <div>
+              <label for="">Do you want to include Lowercase Characters :</label>
+              <input type="checkbox" id="Lowercase" name="Lowercase">
+            </div>
+            <div>
+              <label for="">Do you want to include Digits :</label>
+              <input type="checkbox" id="Digits" name="Digits">
+            </div>
+            <div>
+              <label for="">Do you want to exclude Duplicates  :</label>
+              <input type="checkbox" id="Duplicates" name="Duplicates">
+            </div>
+            <div>
+              <label for="">Do you want to exclude Ambiguous Characters  :</label>
+              <input type="checkbox" id="Ambiguous" name="Ambiguous">
+            </div>
+            <div>
+              <button id="button">Submit</button>
+            </div>
+            <div>
+              <textarea name="comments" id="textarea" cols="30" rows="10" onclick=copy()></textarea>
+            </div>
+          </form>
+  
+      </div>
+    </section>  
+  </center>
+  
+  
 </body>
-<script src="script.js"></script>
+<script src="psswd.js"></script>
+
 </html>
